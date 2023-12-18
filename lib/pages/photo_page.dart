@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_json/components/photo_list_without_boarder.dart';
 import 'package:test_json/model/photo.dart';
 import 'package:test_json/network/fetch_photo.dart';
 import 'package:http/http.dart' as http;
@@ -27,9 +28,11 @@ class _PhotoPageState extends State<PhotoPage> {
               child: Text('An error has occurred!'),
             );
           } else if (response.hasData) {
-            return PhotoList(
-              photos: response.data ?? List.empty(),
-            );
+            return PhotoListWithoutBoarder(
+                photos: response.data ?? List.empty());
+            //   PhotoList(
+            //   photos: response.data ?? List.empty(),
+            // );
           } else {
             return const Center(
               child: CircularProgressIndicator(),
@@ -40,5 +43,3 @@ class _PhotoPageState extends State<PhotoPage> {
     );
   }
 }
-
-
