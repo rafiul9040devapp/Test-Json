@@ -15,17 +15,17 @@ class PhotoList extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.red,
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(20),
-            ),
+          foregroundDecoration: BoxDecoration(
+            border: Border.all(color: Colors.red, width: 2),
+            borderRadius: const BorderRadius.all(Radius.circular(16)),
           ),
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+          clipBehavior: Clip.antiAlias,
           child: Image.network(
             photos[index].thumbnailUrl ?? '',
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         );
       },
