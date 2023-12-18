@@ -22,22 +22,24 @@ class BeautifulDesign extends StatelessWidget {
             height: double.infinity,
             width: double.infinity,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                photo.title ?? '',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.adamina(
-                  textStyle: const TextStyle(
-                    color: Colors.black54,
-                    fontSize: 30,
-                    letterSpacing: .5,
-                    backgroundColor: Colors.white
+          Center(
+            child: Card(
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  photo.title ?? '',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.adamina(
+                    textStyle: const TextStyle(
+                      color: Colors.black87,
+                      fontSize: 30,
+                      letterSpacing: 1,
+                    ),
                   ),
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),
