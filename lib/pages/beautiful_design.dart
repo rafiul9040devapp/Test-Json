@@ -32,7 +32,7 @@ class BeautifulDesign extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.adamina(
                     textStyle: const TextStyle(
-                      color: Colors.black87,
+                      color: Colors.black54,
                       fontSize: 30,
                       letterSpacing: 1,
                     ),
